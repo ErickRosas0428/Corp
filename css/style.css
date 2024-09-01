@@ -1,0 +1,345 @@
+/* Carrusel */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 2000px;
+    height: 600px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.carousel-caption .row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel-caption .col-md-6 {
+    padding: 1rem;
+}
+
+.carousel-caption .btn {
+    margin-top: 1rem;
+}
+
+.carousel-caption .col-md-6.text-end {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 772px) {
+    .carousel-item img {
+        width: auto;
+        height: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        width: 100%;
+        height: 600px;
+    }
+}
+
+/* Sobre Nosotros */
+.about {
+    background-color: #ffffff;
+}
+
+.card {
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-text {
+        font-size: 0.875rem;
+    }
+}
+
+#sobre-nosotros .card-body {
+    text-align: justify;
+}
+
+#sobre-nosotros .card-body ul {
+    padding-left: 20px;
+}
+
+#sobre-nosotros .card-body ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#sobre-nosotros .card-body ul li i {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+#sobre-nosotros {
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#sobre-nosotros .container {
+    padding: 0 15px;
+    margin-top: 30px;
+}
+
+#sobre-nosotros h2 {
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+#sobre-nosotros p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#sobre-nosotros .text-center h2 {
+    font-size: 2.5rem;
+}
+
+#sobre-nosotros .row .card {
+    border: 0;
+}
+
+#sobre-nosotros .row .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#sobre-nosotros .row .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#sobre-nosotros .row .list-unstyled li {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Animaciones */
+@media (min-width: 768px) {
+    .animate__animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    
+    .animate__fadeIn {
+        animation-name: fadeIn;
+    }
+    
+    .animate__zoomIn {
+        animation-name: zoomIn;
+    }
+    
+    .animate__fadeInDown {
+        animation-name: fadeInDown;
+    }
+    
+    .animate__fadeInUp {
+        animation-name: fadeInUp;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Servicios */
+.services {
+    background-color: rgb(239, 239, 239);
+}
+
+#servicios .card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+#servicios .card:hover {
+    transform: scale(1.05);
+}
+
+#servicios .card-body {
+    padding: 2rem;
+}
+
+#servicios .card-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+#servicios .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+#servicios .card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#servicios .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#servicios .col-12 h2 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    #servicios .card-title {
+        font-size: 1.5rem;
+    }
+    
+    #servicios .card-text {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #servicios .card-title {
+        font-size: 1.25rem;
+    }
+
+    #servicios .card-text {
+        font-size: 0.75rem;
+    }
+}
+
+/* Título y descripción de la sección "Nuestros Servicios" */
+#servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#servicios p.lead {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Ajustes responsivos para "Nuestros Servicios" */
+@media (max-width: 768px) {
+    #servicios h2 {
+        font-size: 2rem;
+    }
+
+    #servicios p.lead {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #servicios h2 {
+        font-size: 1.75rem;
+    }
+
+    #servicios p.lead {
+        font-size: 0.75rem;
+    }
+}
